@@ -12,16 +12,7 @@ class TestBissectionMethod:
 			root = find_root(function, interval, precision)
 
 
-	def test_finding_root_of_linear_function_with_low_precision(self):
-		function = lambda x: 2*x + 1
-		interval = (-1, 0)
-		precision = 4
-
-		root = find_root(function, interval, precision)
-
-		assert -0.5 - precision < root < -0.5 + precision
-
-	def test_finding_root_of_linear_function_with_high_precision(self):
+	def test_finding_root_of_linear_function(self):
 		function = lambda x: 2*x + 1
 		interval = (-1, 0)
 		precision = 1e-5
